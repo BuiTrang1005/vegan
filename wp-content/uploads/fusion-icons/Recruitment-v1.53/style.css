@@ -1,0 +1,141 @@
+@font-face {
+  font-family: 'Recruitment';
+  src:  url('/wp-content/uploads/fusion-icons/Recruitment-v1.53/fonts/Recruitment.eot?h3u5v0');
+  src:  url('/wp-content/uploads/fusion-icons/Recruitment-v1.53/fonts/Recruitment.eot?h3u5v0#iefix') format('embedded-opentype'),
+    url('/wp-content/uploads/fusion-icons/Recruitment-v1.53/fonts/Recruitment.ttf?h3u5v0') format('truetype'),
+    url('/wp-content/uploads/fusion-icons/Recruitment-v1.53/fonts/Recruitment.woff?h3u5v0') format('woff'),
+    url('/wp-content/uploads/fusion-icons/Recruitment-v1.53/fonts/Recruitment.svg?h3u5v0#Recruitment') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="awb-recruitment-"], [class*=" awb-recruitment-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'Recruitment' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.awb-recruitment-arrow:before {
+  content: "\e925";
+}
+.awb-recruitment-comment-dollar-solid:before {
+  content: "\e900";
+}
+.awb-recruitment-chess-king-solid:before {
+  content: "\e902";
+}
+.awb-recruitment-globe-solid:before {
+  content: "\e909";
+}
+.awb-recruitment-envelope-open-text-solid:before {
+  content: "\e91c";
+}
+.awb-recruitment-book-reader-solid:before {
+  content: "\e920";
+}
+.awb-recruitment-briefcase-solid:before {
+  content: "\e923";
+}
+.awb-recruitment-clone-regular:before {
+  content: "\e924";
+}
+.awb-recruitment-tick-1:before {
+  content: "\e921";
+}
+.awb-recruitment-logo-circle-2:before {
+  content: "\e922";
+}
+.awb-recruitment-contract:before {
+  content: "\e91d";
+}
+.awb-recruitment-candidate-selection:before {
+  content: "\e91e";
+}
+.awb-recruitment-employer-needs:before {
+  content: "\e91f";
+}
+.awb-recruitment-experience:before {
+  content: "\e919";
+}
+.awb-recruitment-hiring:before {
+  content: "\e91a";
+}
+.awb-recruitment-jobs-done:before {
+  content: "\e91b";
+}
+.awb-recruitment-upload:before {
+  content: "\e918";
+}
+.awb-recruitment-contract-staff:before {
+  content: "\e915";
+}
+.awb-recruitment-permanent-staff:before {
+  content: "\e916";
+}
+.awb-recruitment-temporary-staff:before {
+  content: "\e917";
+}
+.awb-recruitment-education:before {
+  content: "\e90f";
+}
+.awb-recruitment-engineering:before {
+  content: "\e910";
+}
+.awb-recruitment-govt:before {
+  content: "\e911";
+}
+.awb-recruitment-hr-marketing:before {
+  content: "\e912";
+}
+.awb-recruitment-it-sector:before {
+  content: "\e913";
+}
+.awb-recruitment-logistics:before {
+  content: "\e914";
+}
+.awb-recruitment-arrow-btn:before {
+  content: "\e90e";
+}
+.awb-recruitment-menu-two:before {
+  content: "\e90b";
+}
+.awb-recruitment-close:before {
+  content: "\e901";
+}
+.awb-recruitment-location:before {
+  content: "\e90a";
+}
+.awb-recruitment-phone:before {
+  content: "\e903";
+}
+.awb-recruitment-email:before {
+  content: "\e904";
+}
+.awb-recruitment-star:before {
+  content: "\e905";
+}
+.awb-recruitment-quotes:before {
+  content: "\e906";
+}
+.awb-recruitment-benefits:before {
+  content: "\e907";
+}
+.awb-recruitment-graph:before {
+  content: "\e908";
+}
+.awb-recruitment-executive-search:before {
+  content: "\e90c";
+}
+.awb-recruitment-jobs:before {
+  content: "\e90d";
+}

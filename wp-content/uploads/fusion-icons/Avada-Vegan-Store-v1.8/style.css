@@ -1,0 +1,93 @@
+@font-face {
+  font-family: 'Avada-Vegan-Store';
+  src:  url('/wp-content/uploads/fusion-icons/Avada-Vegan-Store-v1.8/fonts/Avada-Vegan-Store.eot?p6k74q');
+  src:  url('/wp-content/uploads/fusion-icons/Avada-Vegan-Store-v1.8/fonts/Avada-Vegan-Store.eot?p6k74q#iefix') format('embedded-opentype'),
+    url('/wp-content/uploads/fusion-icons/Avada-Vegan-Store-v1.8/fonts/Avada-Vegan-Store.ttf?p6k74q') format('truetype'),
+    url('/wp-content/uploads/fusion-icons/Avada-Vegan-Store-v1.8/fonts/Avada-Vegan-Store.woff?p6k74q') format('woff'),
+    url('/wp-content/uploads/fusion-icons/Avada-Vegan-Store-v1.8/fonts/Avada-Vegan-Store.svg?p6k74q#Avada-Vegan-Store') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="awb-vegan-store"], [class*=" awb-vegan-store"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'Avada-Vegan-Store' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.awb-vegan-storecheck-solid:before {
+  content: "\e912";
+}
+.awb-vegan-storeangle-down-solid:before {
+  content: "\e90f";
+}
+.awb-vegan-storeangle-up-solid:before {
+  content: "\e907";
+}
+.awb-vegan-storeangle-right-solid:before {
+  content: "\e911";
+}
+.awb-vegan-storearrow-alt-circle-right-regular:before {
+  content: "\e910";
+}
+.awb-vegan-storefrown-open-regular:before {
+  content: "\e913";
+}
+.awb-vegan-storecheck-circle-regular:before {
+  content: "\e914";
+}
+.awb-vegan-storeenvelope-regular:before {
+  content: "\e915";
+}
+.awb-vegan-storediscounts:before {
+  content: "\e90d";
+}
+.awb-vegan-storestore:before {
+  content: "\e90e";
+}
+.awb-vegan-storeicon-vegan:before {
+  content: "\e90c";
+}
+.awb-vegan-storestar:before {
+  content: "\e909";
+}
+.awb-vegan-storemenu:before {
+  content: "\e903";
+}
+.awb-vegan-storeclose:before {
+  content: "\e90a";
+}
+.awb-vegan-storearrow:before {
+  content: "\e906";
+}
+.awb-vegan-storephone:before {
+  content: "\e908";
+}
+.awb-vegan-storegurantee:before {
+  content: "\e900";
+}
+.awb-vegan-storepayments:before {
+  content: "\e901";
+}
+.awb-vegan-storedelivery:before {
+  content: "\e902";
+}
+.awb-vegan-storecart:before {
+  content: "\e904";
+}
+.awb-vegan-storesearch:before {
+  content: "\e90b";
+}
+.awb-vegan-storeuser:before {
+  content: "\e905";
+}
