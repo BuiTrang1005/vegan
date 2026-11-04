@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Dashboard quản lý Avada Vegan Store">
+  <title>Dashboard – Avada Vegan Store</title>
+  <link rel="stylesheet" href="/dashboard/globals.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="/vegan-store-home-alt/"><span class="brand-mark">AV</span><span>AVADA<small>VEGAN STORE</small></span></a>
+      <nav aria-label="Điều hướng chính">
+        <p class="nav-label">TỔNG QUAN</p>
+        <a class="nav-item active" href="#overview"><span>⌂</span> Tổng quan</a>
+        <a class="nav-item" href="#orders"><span>▣</span> Đơn hàng</a>
+        <a class="nav-item" href="#products"><span>◈</span> Sản phẩm</a>
+        <p class="nav-label">QUẢN LÝ</p>
+        <a class="nav-item" href="#customers"><span>◎</span> Khách hàng</a>
+        <a class="nav-item" href="#analytics"><span>◒</span> Phân tích</a>
+        <a class="nav-item" href="#settings"><span>⚙</span> Cài đặt</a>
+      </nav>
+      <div class="sidebar-bottom"><div class="help-card"><strong>Cần hỗ trợ?</strong><span>Đội ngũ của chúng tôi luôn sẵn sàng.</span><a href="#support">Liên hệ hỗ trợ →</a></div><button id="logout" class="logout">↪ Đăng xuất</button></div>
+    </aside>
+    <main class="main-content" id="overview">
+      <header class="topbar"><button class="mobile-menu" aria-label="Mở menu">☰</button><div class="breadcrumb">Dashboard <span>/</span> Tổng quan</div><div class="top-actions"><button class="icon-button" aria-label="Thông báo">♧<i></i></button><div class="profile"><span class="avatar">TL</span><span><strong>Tuilaketoan</strong><small>Quản trị viên</small></span><b>⌄</b></div></div></header>
+      <div class="content-wrap">
+        <section class="welcome"><div><p class="eyebrow">THỨ HAI, 04 THÁNG 11, 2026</p><h1>Chào buổi sáng, <em>Tuilaketoan.</em></h1><p>Đây là những gì đang diễn ra với cửa hàng của bạn hôm nay.</p></div><button class="primary-button" id="new-order">＋ Tạo đơn hàng</button></section>
+        <section class="stats-grid" aria-label="Chỉ số kinh doanh"><article class="stat-card"><div class="stat-head"><span>DOANH THU</span><span class="trend up">↑ 12.8%</span></div><strong>₫128.450.000</strong><p>So với tháng trước</p><div class="sparkline green"></div></article><article class="stat-card"><div class="stat-head"><span>ĐƠN HÀNG</span><span class="trend up">↑ 8.2%</span></div><strong>1.284</strong><p>So với tháng trước</p><div class="sparkline orange"></div></article><article class="stat-card"><div class="stat-head"><span>KHÁCH HÀNG MỚI</span><span class="trend up">↑ 5.4%</span></div><strong>342</strong><p>So với tháng trước</p><div class="sparkline blue"></div></article><article class="stat-card"><div class="stat-head"><span>TỶ LỆ CHUYỂN ĐỔI</span><span class="trend down">↓ 1.2%</span></div><strong>4,86%</strong><p>So với tháng trước</p><div class="sparkline purple"></div></article></section>
+        <section class="dashboard-grid"><article class="panel chart-panel"><div class="panel-head"><div><h2>Doanh thu</h2><p>Hiệu suất doanh thu trong 7 tháng qua</p></div><select aria-label="Khoảng thời gian"><option>7 tháng qua</option><option>30 ngày qua</option></select></div><div class="chart"><div class="y-axis"><span>₫40m</span><span>₫30m</span><span>₫20m</span><span>₫10m</span><span>₫0</span></div><div class="chart-area"><div class="grid-lines"><i></i><i></i><i></i><i></i><i></i></div><svg viewBox="0 0 700 240" preserveAspectRatio="none" aria-label="Biểu đồ doanh thu"><defs><linearGradient id="fill" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#72b587" stop-opacity=".28"/><stop offset="1" stop-color="#72b587" stop-opacity="0"/></linearGradient></defs><path d="M0,190 C45,168 70,176 105,140 S170,155 205,110 S280,130 320,98 S390,105 430,78 S500,96 540,55 S610,75 700,25 V240 H0Z" fill="url(#fill)"/><path d="M0,190 C45,168 70,176 105,140 S170,155 205,110 S280,130 320,98 S390,105 430,78 S500,96 540,55 S610,75 700,25" fill="none" stroke="#4c9663" stroke-width="3"/></svg><div class="x-axis"><span>Tháng 6</span><span>Tháng 7</span><span>Tháng 8</span><span>Tháng 9</span><span>Tháng 10</span><span>Tháng 11</span><span>Tháng 12</span></div></div></div></article><article class="panel category-panel"><div class="panel-head"><div><h2>Sản phẩm bán chạy</h2><p>Phân bổ doanh thu theo danh mục</p></div><a href="#products">Xem tất cả</a></div><div class="donut-wrap"><div class="donut"><div><strong>₫128m</strong><span>Tổng doanh thu</span></div></div><ul class="legend"><li><i class="dot green-dot"></i>Thực phẩm<span>42%</span></li><li><i class="dot orange-dot"></i>Đồ uống<span>28%</span></li><li><i class="dot blue-dot"></i>Mỹ phẩm<span>18%</span></li><li><i class="dot purple-dot"></i>Khác<span>12%</span></li></ul></div></article></section>
+        <section class="panel orders-panel"><div class="panel-head"><div><h2>Đơn hàng gần đây</h2><p>Theo dõi các giao dịch mới nhất của bạn</p></div><a href="#orders">Xem tất cả đơn hàng →</a></div><div class="table-scroll"><table><thead><tr><th>MÃ ĐƠN HÀNG</th><th>KHÁCH HÀNG</th><th>NGÀY ĐẶT</th><th>SỐ TIỀN</th><th>TRẠNG THÁI</th></tr></thead><tbody><tr><td><strong>#AV-1082</strong></td><td><span class="customer">NL</span>Nguyễn Lan</td><td>04/11/2026</td><td><strong>₫1.240.000</strong></td><td><span class="status completed">Hoàn thành</span></td></tr><tr><td><strong>#AV-1081</strong></td><td><span class="customer pink">TH</span>Trần Hoàng</td><td>04/11/2026</td><td><strong>₫860.000</strong></td><td><span class="status processing">Đang xử lý</span></td></tr><tr><td><strong>#AV-1080</strong></td><td><span class="customer blue">LM</span>Lê Minh</td><td>03/11/2026</td><td><strong>₫2.450.000</strong></td><td><span class="status completed">Hoàn thành</span></td></tr><tr><td><strong>#AV-1079</strong></td><td><span class="customer yellow">PH</span>Phạm Hương</td><td>03/11/2026</td><td><strong>₫540.000</strong></td><td><span class="status cancelled">Đã huỷ</span></td></tr></tbody></table></div></section>
+      </div>
+    </main>
+  </div>
+  <script>document.querySelector('#logout').addEventListener('click',()=>location.href='/login/');document.querySelector('#new-order').addEventListener('click',()=>alert('Tính năng tạo đơn hàng đang được chuẩn bị.'));document.querySelector('.mobile-menu').addEventListener('click',()=>document.querySelector('.sidebar').classList.toggle('open'));</script>
+</body>
+</html>

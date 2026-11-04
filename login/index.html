@@ -31,8 +31,8 @@
           <p>Tiếp tục hành trình sống xanh của bạn.</p>
         </div>
         <form id="login-form" class="login-form" novalidate>
-          <label for="email">Email</label>
-          <input id="email" name="email" type="email" autocomplete="email" placeholder="ban@example.com" required>
+          <label for="email">Tài khoản</label>
+          <input id="email" name="email" type="text" autocomplete="username" placeholder="Nhập tài khoản" required>
           <span class="field-error" id="email-error" role="alert"></span>
 
           <div class="label-row">
@@ -80,7 +80,15 @@
       let valid = true;
       if (!email.validity.valid) { document.querySelector('#email-error').textContent = 'Vui lòng nhập email hợp lệ.'; valid = false; }
       if (!password.validity.valid) { document.querySelector('#password-error').textContent = 'Mật khẩu cần ít nhất 6 ký tự.'; valid = false; }
-      if (valid) status.textContent = 'Thông tin hợp lệ — đang kết nối tài khoản của bạn.';
+      if (valid) {
+        if (email.value.trim() === 'tuilaketoan' && password.value === 'ketoan@2027') {
+          status.textContent = 'Đăng nhập thành công — đang mở dashboard.';
+          window.setTimeout(() => { window.location.href = '/dashboard/'; }, 350);
+        } else {
+          status.textContent = 'Tài khoản hoặc mật khẩu chưa đúng.';
+          status.style.color = '#b54e42';
+        }
+      }
     });
   </script>
 </body>
