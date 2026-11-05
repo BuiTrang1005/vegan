@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Danh sách hóa đơn bán hàng | VietLedger</title>
+  <link rel="stylesheet" href="/KeToan/Common/globals.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="logo"><b>Enterprise Ledger</b><strong>VIETLEDGER<small>ENTERPRISE<br>ERP</small></strong></div>
+      <div class="branch"><span>▣</span><small>Chi nhánh hoạt động</small><b>Công ty Cổ phần Tập đoàn Alp...</b><span>⌄</span></div>
+      <nav>
+        <p>PHÂN HỆ TÀI CHÍNH</p>
+        <a href="/KeToan/Dashboard/">▦ <span>Tổng quan &amp; Dashboard</span></a>
+        <p class="nav-divider">DASHBOARD NGHIỆP VỤ</p>
+        <a href="/KeToan/Dashboard/warehouse.html">▣ <span>Kế toán kho</span></a>
+        <a class="active" href="/KeToan/Nhập liệu/Bán hàng/">▤ <span>Kế toán bán hàng</span></a>
+        <a href="/KeToan/Dashboard/cash.html">₫ <span>Thu chi</span></a>
+      </nav>
+    </aside>
+    <main class="main">
+      <header class="topbar">
+        <button class="period"><span>▣</span><small>Kỳ kế toán hiện hành</small><b>Kỳ kế toán: Quý IV/2024 - Năm tài chính 2024</b><em>⌄</em></button>
+        <div class="search">⌕ <span>Tìm kiếm chứng từ, tài khoản...</span><kbd>Ctrl+K</kbd></div>
+        <div class="user"><span>♧</span><div><b>Nguyễn Thị Minh Châu</b><small>Kế toán trưởng</small></div><i>NC</i></div>
+      </header>
+      <div class="content invoice-page">
+        <div class="context">
+          <div><span class="crumb">NHẬP LIỆU • BÁN HÀNG</span><span class="live">● Đồng bộ Realtime</span><h1>Danh sách hóa đơn bán hàng</h1></div>
+          <div class="context-actions"><button class="outline">↻ Làm mới</button><button class="primary">＋ Lập hóa đơn</button></div>
+        </div>
+        <section class="filter-panel">
+          <div class="filter-title"><div><span class="crumb">BỘ LỌC DANH SÁCH</span><h2>Tra cứu hóa đơn</h2></div><span class="filter-count" id="resultCount">6 hóa đơn</span></div>
+          <div class="invoice-filters">
+            <label>Từ ngày<input id="fromDate" type="date" value="2024-10-01"></label>
+            <label>Đến ngày<input id="toDate" type="date" value="2024-10-31"></label>
+            <label>Khách hàng<select id="customer"><option value="">Tất cả khách hàng</option><option>Công ty CP Bất động sản Kinh Bắc</option><option>Ngân hàng TMCP Ngoại Thương VN</option><option>Tập đoàn Chế tạo Máy Mitsubishi VN</option></select></label>
+            <label>TK hạch toán<select id="account"><option value="">Tất cả tài khoản</option><option>511 - Doanh thu bán hàng</option><option>131 - Phải thu khách hàng</option><option>3331 - Thuế GTGT phải nộp</option></select></label>
+            <label>Chi nhánh<select id="branchFilter"><option value="">Tất cả chi nhánh</option><option>Trụ sở chính</option><option>Chi nhánh Hà Nội</option><option>Chi nhánh Bình Dương</option></select></label>
+            <label>Kho xuất hàng<select id="warehouse"><option value="">Tất cả kho</option><option>Kho thành phẩm A</option><option>Kho nguyên vật liệu</option><option>Kho chi nhánh Hà Nội</option></select></label>
+            <label>Số hóa đơn từ<input id="invoiceFrom" type="text" placeholder="0000001"></label>
+            <label>Số hóa đơn đến<input id="invoiceTo" type="text" placeholder="9999999"></label>
+            <button class="primary filter-submit" id="applyFilter">⌕ Lọc dữ liệu</button>
+          </div>
+        </section>
+        <section class="table-card">
+          <div class="table-head"><div><span class="crumb">KẾT QUẢ TRA CỨU</span><h2>Hóa đơn bán hàng</h2></div><span class="table-note">Đơn vị: VNĐ</span></div>
+          <div class="table-wrap"><table><thead><tr><th>Ngày HĐ</th><th>Số hóa đơn</th><th>Khách hàng</th><th>TK</th><th>Chi nhánh</th><th>Kho xuất hàng</th><th class="align-right">Tổng tiền</th><th>Trạng thái</th><th></th></tr></thead><tbody id="invoiceRows"></tbody></table></div>
+          <div class="table-footer"><span id="summary">Hiển thị 6 hóa đơn</span><div class="pagination"><button>‹</button><button class="current">1</button><button>2</button><button>›</button></div></div>
+        </section>
+      </div>
+    </main>
+  </div>
+  <script>
+    const invoices = [
+      {date:'24/10/2024',number:'0002410',customer:'Tập đoàn Chế tạo Máy Mitsubishi VN',account:'511',branch:'Trụ sở chính',warehouse:'Kho thành phẩm A',total:'12.450.000.000',status:'Đã phát hành'},
+      {date:'23/10/2024',number:'0002409',customer:'Công ty CP Bất động sản Kinh Bắc',account:'511',branch:'Chi nhánh Hà Nội',warehouse:'Kho chi nhánh Hà Nội',total:'4.800.000.000',status:'Đã phát hành'},
+      {date:'22/10/2024',number:'0002408',customer:'Hóa chất & Nhựa Bình Sơn TNHH',account:'511',branch:'Trụ sở chính',warehouse:'Kho nguyên vật liệu',total:'3.590.000.000',status:'Đã thanh toán'},
+      {date:'21/10/2024',number:'0002407',customer:'Ngân hàng TMCP Ngoại Thương VN',account:'131',branch:'Chi nhánh Bình Dương',warehouse:'Kho thành phẩm A',total:'2.000.000.000',status:'Chờ thanh toán'},
+      {date:'18/10/2024',number:'0002406',customer:'Công ty CP Bất động sản Kinh Bắc',account:'3331',branch:'Chi nhánh Hà Nội',warehouse:'Kho chi nhánh Hà Nội',total:'1.250.000.000',status:'Đã phát hành'},
+      {date:'15/10/2024',number:'0002405',customer:'Tập đoàn Chế tạo Máy Mitsubishi VN',account:'511',branch:'Trụ sở chính',warehouse:'Kho thành phẩm A',total:'980.000.000',status:'Đã thanh toán'}
+    ];
+    const rows = document.querySelector('#invoiceRows');
+    const controls = ['customer','account','branchFilter','warehouse'];
+    function renderInvoices() {
+      const selected = Object.fromEntries(controls.map(id => [id, document.querySelector('#' + id).value]));
+      const from = Number(document.querySelector('#invoiceFrom').value || 0);
+      const to = Number(document.querySelector('#invoiceTo').value || 999999999);
+      const filtered = invoices.filter(item => (!selected.customer || item.customer === selected.customer) && (!selected.account || item.account === selected.account) && (!selected.branchFilter || item.branch === selected.branchFilter) && (!selected.warehouse || item.warehouse === selected.warehouse) && Number(item.number) >= from && Number(item.number) <= to);
+      rows.innerHTML = filtered.map(item => `<tr><td>${item.date}</td><td><b class="doc-number">${item.number}</b></td><td>${item.customer}</td><td><b>${item.account}</b></td><td>${item.branch}</td><td>${item.warehouse}</td><td class="align-right"><b>${item.total}</b></td><td><span class="status ${item.status === 'Chờ thanh toán' ? 'warning' : 'success'}">${item.status}</span></td><td><button class="row-action">Xem</button></td></tr>`).join('') || '<tr><td colspan="9" class="empty-row">Không tìm thấy hóa đơn phù hợp với điều kiện lọc.</td></tr>';
+      document.querySelector('#resultCount').textContent = `${filtered.length} hóa đơn`;
+      document.querySelector('#summary').textContent = `Hiển thị ${filtered.length} hóa đơn trong kỳ báo cáo`;
+    }
+    document.querySelector('#applyFilter').addEventListener('click', renderInvoices);
+    renderInvoices();
+  </script>
+  <script src="/KeToan/Common/shared.js"></script>
+</body>
+</html>
