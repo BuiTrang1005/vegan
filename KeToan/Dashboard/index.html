@@ -2,14 +2,14 @@
 <html lang="vi">
 <head>
   <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>VietLedger Enterprise ERP</title><link rel="stylesheet" href="/dashboard/globals.css">
+  <title>VietLedger Enterprise ERP</title><link rel="stylesheet" href="/KeToan/Common/globals.css">
 </head>
 <body>
 <div class="app-shell">
   <aside class="sidebar">
     <div class="logo"><b>Enterprise Ledger</b><strong>VIETLEDGER<small>ENTERPRISE<br>ERP</small></strong></div>
     <div class="branch"><span>▣</span><small>Chi nhánh hoạt động</small><b>Công ty Cổ phần Tập đoàn Alp...</b><span>⌄</span></div>
-    <nav><p>PHÂN HỆ TÀI CHÍNH</p><a class="active" href="#overview">▦ <span>Tổng quan &amp; Dashboard</span></a><div class="nav-group"><a class="nav-parent" href="#documents">▤ <span>Danh sách chứng từ</span><b>⌄</b></a><div class="nav-submenu"><a href="#documents-summary">Tổng hợp</a><a href="#documents-cash">Tiền mặt</a><a href="#documents-bank">Ngân hàng</a><a href="/sales/">Bán hàng</a><a href="#documents-receivable">Phải thu</a><a href="#documents-purchase">Mua hàng</a><a href="#documents-payable">Phải trả</a><a href="/warehouse/">Hàng tồn kho</a><a href="#documents-cost">Giá thành</a><a href="#documents-prepaid">Chi phí trả trước</a><a href="#documents-assets">Tài sản cố định</a><a href="#documents-management">Quản lý và Thông tin chung</a></div></div><a href="#camera">▧ <span>AI OCR &amp; Hóa đơn Camera</span></a><a href="#reports">▤ <span>Báo cáo &amp; Big Data Sổ Cái</span></a><p class="nav-divider">DASHBOARD NGHIỆP VỤ</p><a href="/warehouse/">▣ <span>Kế toán kho</span></a><a href="/sales/">▤ <span>Kế toán bán hàng</span></a><a href="/cash/">₫ <span>Thu chi</span></a></nav>
+    <nav><p>PHÂN HỆ TÀI CHÍNH</p><a class="active" href="#overview">▦ <span>Tổng quan &amp; Dashboard</span></a><div class="nav-group"><a class="nav-parent" href="#documents">▤ <span>Danh sách chứng từ</span><b>⌄</b></a><div class="nav-submenu"><a href="#documents-summary">Tổng hợp</a><a href="#documents-cash">Tiền mặt</a><a href="#documents-bank">Ngân hàng</a><a href="/KeToan/Nhập liệu/Bán hàng/">Bán hàng</a><a href="#documents-receivable">Phải thu</a><a href="#documents-purchase">Mua hàng</a><a href="#documents-payable">Phải trả</a><a href="/KeToan/Dashboard/warehouse.html">Hàng tồn kho</a><a href="#documents-cost">Giá thành</a><a href="#documents-prepaid">Chi phí trả trước</a><a href="#documents-assets">Tài sản cố định</a><a href="#documents-management">Quản lý và Thông tin chung</a></div></div><a href="#camera">▧ <span>AI OCR &amp; Hóa đơn Camera</span></a><a href="#reports">▤ <span>Báo cáo &amp; Big Data Sổ Cái</span></a><p class="nav-divider">DASHBOARD NGHIỆP VỤ</p><a href="/KeToan/Dashboard/warehouse.html">▣ <span>Kế toán kho</span></a><a href="/KeToan/Nhập liệu/Bán hàng/">▤ <span>Kế toán bán hàng</span></a><a href="/KeToan/Dashboard/cash.html">₫ <span>Thu chi</span></a></nav>
   </aside>
   <main class="main" id="overview">
     <header class="topbar"><button class="period" id="periodTrigger" type="button"><span>▣</span><small>Kỳ kế toán hiện hành</small><b>Kỳ kế toán: Quý IV/2024 - Năm tài chính 2024</b><em>⌄</em></button><div class="search">⌕ <span>Tìm kiếm chứng từ, tài khoản...</span><kbd>Ctrl+K</kbd></div><div class="user"><span>♧</span><div><b>Nguyễn Thị Minh Châu</b><small>Kế toán trưởng</small></div><i>NC</i></div></header>
@@ -23,5 +23,5 @@
     </div>
   </main>
 </div><div class="period-modal" id="periodModal" hidden><div class="period-dialog" role="dialog" aria-modal="true" aria-labelledby="periodTitle"><div class="dialog-head"><div><small>THIẾT LẬP KỲ KẾ TOÁN</small><h2 id="periodTitle">Chọn kỳ kế toán</h2></div><button id="periodClose" type="button" aria-label="Đóng">×</button></div><label for="fiscalYearSelect">Năm tài chính</label><select id="fiscalYearSelect"><option>2024</option><option>2025</option><option>2023</option></select><label for="periodSelect">Kỳ kế toán</label><select id="periodSelect"><option>Quý IV</option><option>Quý III</option><option>Quý II</option><option>Quý I</option></select><div class="dialog-actions"><button class="ghost" id="periodExit" type="button">Thoát</button><button class="primary" id="periodApply" type="button">Áp dụng kỳ kế toán</button></div></div></div>
-<script src="/dashboard/shared.js" defer></script>
+<script src="/KeToan/Common/shared.js" defer></script>
 </body></html>
